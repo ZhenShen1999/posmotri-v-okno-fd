@@ -82,6 +82,7 @@ video {
 }
 
 .result__video-container {
+  height: 386px;
   position: relative;
   inline-size: 711px;
   margin: 0 0 11px;
@@ -188,7 +189,7 @@ video {
   border: 1px solid #fff;
   padding: 6px 0;
   color: #fff;
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: inherit;
   font-weight: 700;
   font-size: 18px;
   text-align: center;
@@ -219,6 +220,7 @@ video {
 }
 
 .content__details {
+  max-inline-size: 399px;
   inline-size: 100%;
 }
 
@@ -238,11 +240,14 @@ video {
 
 /* scrollbar-width removes scrollbar, but only works in Firefox */
 /* https://caniuse.com/?search=scrollbar-width */
-.content__list {
-  position: relative;
+.content__list-container {
+  position: relative; 
   overflow: auto;
   block-size: 298px;
-  scrollbar-width: none;
+}
+
+.content__list {
+  margin-bottom: 30px;
 }
 
 /* Removes scrollbar for most other browsers */
@@ -252,7 +257,7 @@ video {
 }
 
 .content__list-item:not(:last-child) {
-  margin: 0 0 34px;
+  margin: 0 0 30px;
 }
 
 .content__card-link {
@@ -287,7 +292,10 @@ video {
 }
 
 .content__video-card-title {
-  padding: 2px 2px 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 2px 2px 2px;
   color: #fff;
   font-family: Oswald, sans-serif;
   font-weight: 700;
@@ -295,6 +303,12 @@ video {
   line-height: 1;
   text-transform: uppercase;
   hyphens: auto;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
+  flex-basis: 0;
+  overflow: hidden;
 }
 
 .content__video-card-description {
