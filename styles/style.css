@@ -241,7 +241,7 @@ video {
 /* scrollbar-width removes scrollbar, but only works in Firefox */
 /* https://caniuse.com/?search=scrollbar-width */
 .content__list-container {
-  position: relative; 
+  position: relative;
   overflow: auto;
   block-size: 298px;
 }
